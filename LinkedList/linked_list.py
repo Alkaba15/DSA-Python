@@ -66,5 +66,5 @@ class LinkedList :                  # LinkedList Class
       else:
          newNode.next = self.head
          self.head = newNode
-       
+         self.length+=1
     
