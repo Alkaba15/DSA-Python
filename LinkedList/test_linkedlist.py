@@ -9,6 +9,6 @@ myList.append(50)
 myList.append(60)
 
 
-myList.prepend(0)
+number = myList.get(6)
 
-print(myList.tail.value)
+print(number)
