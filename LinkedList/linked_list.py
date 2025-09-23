@@ -99,3 +99,12 @@ class LinkedList :                  # LinkedList Class
              temp = temp.next
           temp.value = value 
        return temp.value
+    
+    def insert(self , index , value):
+       newNode = Node(value)
+       if index < 0 or index > self.length:
+          raise Exception("out of bounds")
+       if index == 0:
+          return self.prepend(value)
+       if index == self.length:
+          return self.append(value) 
