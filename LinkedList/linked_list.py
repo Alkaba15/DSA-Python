@@ -88,4 +88,14 @@ class LinkedList :                  # LinkedList Class
        while count < index:
           temp = temp.next
           count+=1
+       return temp.value 
+    
+    def set_value(self , index, value):
+       if index < 0 or index >= self.length:
+          raise Exception("Out of bonds")
+       else:
+          temp = self.head
+          for _ in range(index):
+             temp = temp.next
+          temp.value = value 
        return temp.value
