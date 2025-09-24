@@ -90,9 +90,9 @@ class LinkedList :                  # LinkedList Class
           count+=1
        return temp.value 
     
-    def set_value(self , index, value):
+    def set_value(self,index, value):
        if index < 0 or index >= self.length:
-          raise Exception("Out of bonds")
+          raise Exception("Index Out of bonds")
        else:
           temp = self.head
           for _ in range(index):
@@ -108,3 +108,11 @@ class LinkedList :                  # LinkedList Class
           return self.prepend(value)
        if index == self.length:
           return self.append(value) 
+       newNode = Node(value)
+       temp = self.head
+       for _ in range(index - 1):
+          temp = temp.next
+       newNode.next = temp.next
+       temp.next = newNode
+       self.length+=1
+       return True
